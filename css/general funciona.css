@@ -1,0 +1,50 @@
+
+body{
+    font-family: 'Muli', sans-serif;
+    margin: 0px;  
+    background:linear-gradient(white, rgba(255, 0, 0, 0.60));
+}
+.header{
+    background: white ;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__titulo{
+    width: 600px;
+    margin: 10px;
+}
+.header__telefono{
+    height: 50px;
+    width: 150px;
+
+}
+.header__telefono--NumeroTelefono{
+    font-size: 30px;
+    color: red;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+.menu__LaAcademia, .menu__MaterialTeorico, .menu__Test, .menu__ClasesTeoricas, .menu__Requisitos, .menu__Contactanos{
+    padding: 15px;
+    border: black;
+    border-radius: 40px;
+    background: rgba(255, 0, 0, 0.48) ;
+    text-decoration: none;
+    color: black;
+}
+.menu__LaAcademia:hover, .menu__MaterialTeorico:hover, .menu__Test:hover, .menu__ClasesTeoricas:hover, .menu__Requisitos:hover, .menu__Contactanos:hover{
+    background-color: red;
+    cursor: pointer;
+    text-decoration: none;
+}
+}
+
