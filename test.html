@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta name="robots" content="noindex">
+
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css2?family=Muli:wght@600&display=swap" rel="stylesheet">  
+    <link href="./css/general.css" rel="stylesheet">
+    <link href="./css/mobile.css" rel="stylesheet">
+    <link href="./css/preguntas.css" rel="stylesheet">
+	<title>Trivial con Javascript | Pablo Monteserín</title>
+	        <meta name="description" content="Ejemplo un juego de preguntas tipo trivial que utiliza Javascript en el que tanto las preguntas como las respuestas se van reordenando aleatoriamente">
+
+<!-- Latest compiled and minified JS -->
+<script src="https://code.jquery.com/jquery.js"></script>
+
+    
+</head>
+<body>
+    <header class="header">
+    <img class="header__titulo" src="file:///C:/Users/Leandro/Desktop/VisualStudio/pagina_web/imagenes/titulo1.png" alt="">
+    <img class="header__telefono" src="file:///C:/Users/Leandro/Desktop/VisualStudio/pagina_web/imagenes/telefono.png" alt="">
+    </header>
+    <section class="menu">
+        <a class="menu__LaAcademia" href="./index.html">La Academia</a>
+        <a class="menu__MaterialTeorico" href="./material teorico.html">Material Teorico</a>
+        <a class="menu__Test" href="./test.html">Examenes</a>
+        <a class="menu__ClasesTeoricas" href="./clases teoricas.html">Clases teoricas</a>
+        <a class="menu__Requisitos" href="./requisitos.html">Requisitos</a>
+        <a class="menu__Contactanos" href="./contactanos.html">Contactanos</a>
+    </section>
+    <section id="texto">
+        <div id="pregunta"></div>
+        <section id="cuerpo">
+            <section id="respuestas"> 
+                    <div id="respuesta1"></div>
+                    <div id="respuesta2"></div>
+                    <div id="respuesta3"></div>
+                    <div id="respuesta4"></div>   
+                    <input id="boton" type="button" value="Siguiente" onclick="comprobar(respuesta)">
+            </section>
+        </section>
+    </section>
+    <footer id="footer">
+        <h1>Chufle's tu mejor opción</h1>
+    </footer>
+    <script>
+		var respuesta;
+		var preguntas = [
+		"¿Que luz te da paso?",
+		"¿Quién es el mayor superheroe de todos los tiempos?",
+		"¿Por qué lo pájaros pían?",
+        "¿1?",
+        "¿2?",
+        "¿3?"
+    	];
+		var respuestas = [
+		["Verde", "Roja", "Amarilla", "Azul"],
+		["Spiderman", "Batman", "Yo mismo", "Tú mismo"],
+		["Tienen hambre", "Tienen frío", "Están contentos", "Están tristes"],
+        ["1", "1", "1", "1"],
+        ["2", "2", "2", "2"],
+        ["3", "3", "3", "3  "]
+		];
+    //jugar();
+    var indice_aleatorio = Math.floor(Math.random()*preguntas.length);
+    var cantidad_de_preguntas = 6;
+    var myArray = [];
+    myArray.length = cantidad_de_preguntas;
+    var numeros_repetidos = [];
+    var i = 0;
+    var cantidad_de_preguntas = 10;
+    while(i < myArray.length){
+        indice_aleatorio = Math.floor(Math.random()*preguntas.length);
+        for (j in myArray){
+            console.log('Entro?');
+            if (myArray[j] == indice_aleatorio){
+                numeros_repetidos.push(indice_aleatorio);
+                indice_aleatorio = Math.floor(Math.random()*preguntas.length);
+            }
+            for (j in numeros_repetidos){
+                while (indice_aleatorio == numeros_repetidos[j]){
+                    indice_aleatorio = Math.floor(Math.random()*preguntas.length) ;
+                    j = 0 ;
+                }
+            }
+        }
+        myArray[i] = indice_aleatorio;
+        numeros_repetidos[i] = indice_aleatorio;
+        i++;
+    }
+    const my = myArray;
+    console.log(myArray);
+    var contador_buenas;
+    var indicie_respuesta_correcta;
+    var contador = 1;
+    
+    jugar(contador);
+    
+    function jugar(){
+        contador -= 1;
+        var respuestas_posibles = respuestas[my[contador]];
+        var posiciones = [0,1,2,3];
+		var respuestas_reordenadas = [];
+		var ya_se_metio = false;
+
+        for(i in respuestas_posibles){
+			var posicion_aleatoria = Math.floor(Math.random()*posiciones.length);
+			if(posicion_aleatoria==0 && ya_se_metio == false){
+				indicie_respuesta_correcta =i;
+				ya_se_metio = true;
+			}
+			respuestas_reordenadas[i] = respuestas_posibles[posiciones[posicion_aleatoria]];
+			posiciones.splice(posicion_aleatoria, 1);
+		}
+
+		var respuesta1="";
+        var respuesta2="";
+        var respuesta3="";
+        var respuesta4="";
+        
+        respuesta1 = '<input id="respuesta1" type="button" name="pp" value="'+respuestas_reordenadas[0]+'">';
+        respuesta2 = '<input id="respuesta2" type="button" name="pp" value="'+respuestas_reordenadas[1]+'">';
+        respuesta3 = '<input id="respuesta3" type="button" name="pp" value="'+respuestas_reordenadas[2]+'">';
+		respuesta4 = '<input id="respuesta4" type="button" name="pp" value="'+respuestas_reordenadas[3]+'">';
+        document.getElementById("respuesta1").innerHTML= respuesta1;
+        document.getElementById("respuesta2").innerHTML = respuesta2;
+        document.getElementById("respuesta3").innerHTML = respuesta3;
+        document.getElementById("respuesta4").innerHTML = respuesta4;
+		document.getElementById("pregunta").innerHTML = preguntas[my[contador]];
+        contador = contador+1;
+        $(document).ready(function(){
+            $("input[id=respuesta1]").click(function(){
+                respuesta = 0;
+            });
+            $("input[id=respuesta2]").click(function(){
+                respuesta = 1;
+            });
+            $("input[id=respuesta3]").click(function(){
+                respuesta = 2;
+            });
+            $("input[id=respuesta4]").click(function(){
+                respuesta = 3;
+            });
+        });
+
+    }
+    function me_voy(){
+        location.href = 'verificacion.html';
+    }
+    function comprobar(respuesta){
+        
+	    /*var respuesta = $("input[name=pp]:focus").val();
+       */ console.log("Elegida:", {respuesta});
+        //console.log(indicie_respuesta_correcta);*/
+        if(respuesta ==indicie_respuesta_correcta){
+            //alert("que bien!");
+            contador++;
+            contador_buenas++;
+        }
+        else{
+            //alert("Mal");
+            contador++;
+        }
+        jugar();
+        if (contador ==5){ 
+            document.getElementById("boton").value="Finalizar";
+            jugar();
+        }
+        if (contador == 6){
+            document.getElementById("boton").onclick=me_voy();
+        }
+        
+    }
+	</script>
+
+</body>
+</html>
