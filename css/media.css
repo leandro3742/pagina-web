@@ -1,0 +1,58 @@
+@media screen and (max-width: 760px){
+    .header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .header__titulo{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .header__telefono{
+        width: 0px;
+        height: 0px;
+    }
+    .menu{
+        margin-top: 10px;
+        width: 100%;
+        border-radius: 0px;
+    }
+    .menu__LaAcademia, .menu__MaterialTeorico, .menu__Test, .menu__ClasesTeoricas, .menu__Requisitos, .menu__Contactanos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+        width: 10%;
+        height: 20px;
+        padding: 7px;
+        font-size: 10px;
+    }
+    
+    
+    .cuerpo__texto1, .cuerpo__texto2, .cuerpo__texto3{
+        font-size: 10px;
+        width: 250px;
+    }
+    .cuerpo__titulo{
+        display: flex;
+        justify-content: center;
+    }
+    .cuerpo__texto{
+        display: flex;
+        justify-content: center;
+        font-size: 10px;
+        text-align: center;
+        
+    }
+    .footer{
+        width: 100%;
+        border-radius: 0px;
+    }
+    .footer__imagen{
+        width: 50px;
+        height: 50px;
+    }
+}
