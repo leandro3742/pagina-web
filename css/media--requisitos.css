@@ -1,0 +1,81 @@
+
+@media screen and (max-width: 760px){
+    :root{
+        --fuente-letras : 10px;
+        --fuente-titulos: 15px;
+        --color-fondo: rgba(255, 245, 245, 0.75);
+    }
+    body{
+        background-color: rgba(255, 0, 0, 0.48);
+    }
+    .header{
+        display: grid;
+        width: 100%;
+        background-color: var(--color-fondo);
+    }
+    .header__titulo{
+        display: flex;
+        justify-content: center;
+        margin-left: 25px;
+        width: 90%;
+    }
+    .header__telefono{
+        margin-left: 40%;
+        width: 75px;
+        height: 25px;
+    }
+    .menu{
+        background-color: var(--color-fondo);
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        width: 100%;
+        border-radius: 0px;
+        padding: 7px;
+    }
+    .menu__LaAcademia, .menu__MaterialTeorico, .menu__Test, .menu__ClasesTeoricas, .menu__Requisitos, .menu__Contactanos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+        margin-left: 10px;
+        width: 30px;
+        height: 10px;
+        padding: 7px;
+        font-size:  7px;/*var(--fuente-letras); */
+    }
+    #titulos{
+        display: grid;
+        justify-content: center;
+    }
+    #titulo1, #titulo2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        font-size: var(--fuente-titulos);
+        width: 300px;
+        height: 50px;
+    }
+    #lista1, #lista2{
+        font-size: var(--fuente-letras);
+        display: grid;
+        justify-content: center;
+        white-space: normal;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    #footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 15px;
+        margin-right: 0px;
+        margin-top: 50px;
+        width: 90%;
+        height: 50px;
+        padding: 5px;
+        font-size: var(--fuente-titulos);
+    }
+}
