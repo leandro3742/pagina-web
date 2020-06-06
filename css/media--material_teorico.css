@@ -1,0 +1,82 @@
+
+@media screen and (max-width: 760px){
+    :root{
+        --fuente-letras : 10px;
+        --color-fondo: rgba(255, 245, 245, 0.75);
+    }
+
+    .header{
+        display: grid;
+        width: 100%;
+        background-color: var(--color-fondo);
+    }
+    .header__titulo{
+        display: flex;
+        justify-content: center;
+        margin-left: 25px;
+        width: 90%;
+    }
+    .header__telefono{
+        margin-left: 150px;
+        width: 75px;
+        height: 25px;
+    }
+    .menu{
+        background-color: var(--color-fondo);
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        width: 100%;
+        border-radius: 0px;
+        padding: 7px;
+    }
+    .menu__LaAcademia, .menu__MaterialTeorico, .menu__Test, .menu__ClasesTeoricas, .menu__Requisitos, .menu__Contactanos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+        margin-left: 10px;
+        width: 30px;
+        height: 10px;
+        padding: 7px;
+        font-size:  7px;/*var(--fuente-letras); */
+    }
+    .titulo1, .titulo2{
+        width: 350px;
+        height: 100px;
+        font-size: 20px;
+    }
+    .material_linea1, .material_linea2{
+        margin-top: 10px;
+        padding: 10px;
+    }
+    #auto-moto, #profesionales {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 250px;
+        height: 10px;
+        font-size: 15px;
+    }
+    .material_linea1__senales, .material_linea1__ley2, .material_linea1__ley1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 250px;
+        height: 10px;
+        font-size: 10px;
+    }
+    .material_linea2__reglamento, .material_linea2__ley, .material_linea2__ley-faltas{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 250px;
+        height: 10px;
+        font-size: 10px;
+    }
+
+}
