@@ -1,0 +1,72 @@
+:root{
+    --fondo: rgba(255, 0, 0, 0.60);
+    --color-fondo: rgba(255, 245, 245, 0.75);
+    --margen: 150px;
+}
+body{
+    font-family: 'Muli', sans-serif;
+    margin:0;
+    }
+#texto{
+    background-color: var(--color-fondo);
+    margin-top: 75px;
+    margin-left: var(--margen);
+    margin-right: var(--margen);
+    border-radius: 40px;
+    border: outset;
+}
+#pregunta{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#cuerpo{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#respuestas{
+    margin-top: 10px;
+}
+#respuesta1, #respuesta2, #respuesta3, #respuesta4{
+    width: 200px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    border-radius: 40px;
+}
+/* Hace que cuado hagas click en el boton se pinte el fondo de color */
+#respuesta1:focus, #respuesta2:focus, #respuesta3:focus, #respuesta4:focus{
+    background-color: var(--fondo);
+    border-radius: 40px;
+    border-bottom: none;
+}
+
+#boton{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin: 50px 0px 20px 50px;
+    padding: 10px;
+    background-color: lightblue;
+    border-radius: 40px;
+}
+
+#footer{
+    margin-top: 20px;
+    margin-left: var(--margen);
+    margin-right: var(--margen);
+    background-color: rgba(255, 245, 245, 0.75);
+    border-radius: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    border: outset;
+    color: red;
+    display: flex;
+    justify-content: center;
+}
