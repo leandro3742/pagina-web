@@ -3,7 +3,9 @@
     --fuente-titulos: 15px;
     --color-fondo: rgba(255, 245, 245, 0.75);
 }
-
+.menu__Requisitos{
+    background-color: red;
+}
 #titulo1, #titulo2{
     display: flex;
     justify-content: center;
