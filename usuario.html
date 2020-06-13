@@ -8,7 +8,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Muli:wght@600&display=swap" rel="stylesheet">  
     <link href="./css/general.css" rel="stylesheet">
     <link href="./css/usuario.css" rel="stylesheet">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<title>Iniciar sesion</title>
 <!-- Latest compiled and minified JS -->
 <script src="https://code.jquery.com/jquery.js"></script>
@@ -36,10 +35,6 @@
         <h1>Chufle's tu mejor opción</h1>
     </footer>
     <script type="text/javascript">
-    import swal from 'sweetalert';
-
-
-
 
         $(document).ready(function()
         {
@@ -73,8 +68,7 @@
                 //Va link
                 location.href = 'test.html';
                 if (sexo[i] == 'f'){
-                    swal("Hello world!");
-                    // alert('Bienvenida '+nombres[i]);
+                    alert('Bienvenida '+nombres[i]);
                 }
                 else{
                 alert('Bienvenido '+nombres[i]);
