@@ -82,7 +82,7 @@ body{
 }
 
 #respuesta0, #respuesta1, #respuesta2, #respuesta3{
-    font-size: 20px;
+    font-size: 15px;
     width: 200px;
     height: 25px;
     display: grid;
