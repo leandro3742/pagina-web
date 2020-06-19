@@ -39,6 +39,7 @@ body{
 }
 #si{
     text-decoration: none;
+    color: black;
     grid-area: si;
     width: 50px;
     font-size: 25px;
@@ -46,6 +47,7 @@ body{
 }
 #no{
     text-decoration: none;
+    color: black;
     grid-area: no;
     width: 50px;
     font-size: 25px;
