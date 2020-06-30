@@ -330,7 +330,7 @@
     // var respuestas_f = quiero_respuestas(my_array);
     // console.log("respuestas", respuestas_f);
     
-    var contador_buenas;
+    var contador_buenas = 0;
     var indicie_respuesta_correcta;
     var contador = -1;
     jugar(contador);
@@ -394,12 +394,11 @@
     }
 
     var contador_de_preguntas = 0;
-    var contador_buenas;
     var indice = 1;
     function comprobar(respuesta){
         console.log(contador_de_preguntas);
         console.log('respuesta: '+respuesta);
-        console.log('buenas:'+ contador_buenas);
+        console.log('buenas '+contador_buenas);
         if(respuesta == indicie_respuesta_correcta){
             contador++;
             contador_buenas++;
