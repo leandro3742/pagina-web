@@ -65,7 +65,7 @@
     "Circula conduciendo detras de un vehículo el cual a indicado la intención de detenerse, Ud. desea adelantarlo, ¿le está permitido hacerlo por el carril derecho si está libre?",
     "¿Debe tener seguro obligatorio un ciclomotor?",
     "El hidroplaneamiento o Aquaplanning es un fenómeno que se produce cuando:",
-    "Al circula con nuestro vehículo lo haremos por el carril:",
+    "Al circular con nuestro vehículo lo haremos por el carril:",
     "¿Es recomendable para el peatón llevar chaleco reflectante si circula de noche?",
     "Si quien conduce lo hace a 40Km/h y necesita una frenada de emergencia, la distancia total de la detención se realizará una vez recorridos 20 metros. Si circula a 80Km/h, la distancia total de detención será:",
     "El estrés hace que el conductor...",
@@ -250,7 +250,7 @@
     ["Si", "No"],
     ["Verdadero", "Falso"], 
     ["Verdadero", "Falso"],
-    ["No pasar el eje de la calzada, demarcado o imaginario", "Encender las luces bajas", "Hace un destello con las luces y acercarse lo más posible a la derecha", "Circular por el eje de la calzada, demarcado o imaginario"],
+    ["No pasar el eje de la calzada, demarcado o imaginario", "Encender las luces bajas", "Hacer un destello con las luces y acercarse lo más posible a la derecha", "Circular por el eje de la calzada, demarcado o imaginario"],
     ["Verdadero", "Falso"],
     ["Para todo los ocupantes del vehículo", "Solo para los ocupantes de atrás", "Ninguna es correcta", "Solo para los ocupantes de los asientos delanteros"],
     ["La facultad de un peatón o un conductor de un vehículo para proseguir su marcha", "La facultad del conductor en el vehículo para cambiar de dirección careciendo de preferencia", "La facultad de un vehículo para no detener la marcha al ingresar a una calle preferencial", "Ninguna es correcta"],
@@ -398,6 +398,7 @@
     function comprobar(respuesta){
         console.log(contador_de_preguntas);
         console.log('respuesta: '+respuesta);
+        console.log(contador_buenas);
         if(respuesta == indicie_respuesta_correcta){
             contador++;
             contador_buenas++;
