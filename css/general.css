@@ -4,7 +4,7 @@
     --borde: 2px solid white;
 }
 body{
-    transition-duration: 1s, 1s;
+    transition-duration: 1s, 5s, 3s, 5s;
     font-family: 'Muli', sans-serif;
     margin: 0px;  
     background-color: var(--color-fondo);
@@ -90,7 +90,7 @@ body{
         display: flex;
         justify-content: center;
         margin-top: 10px;
-        width: 100%;
+        /* width: 100%; */
         border-radius: 0px;
         padding: 7px;
     }
