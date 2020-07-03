@@ -52,16 +52,13 @@
         function comprobar(usuario){
             // var Maira = new Object();
             // Maira.CI = 26372734;
+            const Gaston = '51815373'; 
+            const Maira = '26372734';
+            const Flavio = '34596162';
             const Leandro = '49189815';
-	    const Maira = '26372734';
-	    const Arihana = '50379752';
-	    const Gaston = '51815373';
-	    const Julieta = '50668206';
-	    const Mariela = '50352601';
-		
-            var usuarios_inscriptos = [Maira, Leandro, Arihana, Mariela,Julieta, Gaston];
-            var nombres = ['Maira', 'Leandro','Arihana', 'Mariela','Julieta', 'Gaston'];
-            var sexo = ['f','m','f','f', 'f','m'];
+            var usuarios_inscriptos = [Maira, Flavio, Leandro, Gaston];
+            var nombres = ['Maira', 'Flavio', 'Leandro', 'Gaston'];
+            var sexo = ['f','m','m', 'm'];
             
             var esta;
             var i = 0;
@@ -74,7 +71,7 @@
             }
             if (esta == true){
                 //Va link
-                location.href = 'http://academiachufles.com/test.html';
+                location.href = 'test.html';
                 if (sexo[i] == 'f'){
                      alert('Bienvenida '+nombres[i]);
                 }
