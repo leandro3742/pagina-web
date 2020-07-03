@@ -71,3 +71,57 @@ body{
     font-style: oblique;
     color: red;
 }
+
+@media screen and (max-width: 760px){
+    body{
+        max-height: 80px;
+    }
+    #texto{
+        margin-top: 50px;
+        height: 200px;
+    }
+    #titulo{
+        font-size: 25px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-top: 25px;
+        grid-area: titulo;
+    }
+    #parrafo{
+        margin-top: 25px;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        grid-area: parrafo;
+    }
+    #si{
+        text-decoration: none;
+        color: black;
+        grid-area: si;
+        width: 25px;
+        font-size: 12px;
+        margin-left: 40%;
+    }
+    #no{
+        text-decoration: none;
+        color: black;
+        grid-area: no;
+        width: 25px;
+        font-size: 12px;
+        margin-left: 5%;  
+    }
+    
+    #footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 25px 0 0 15% ;
+        width: 75%;
+        height: 25px;
+        padding: 7.5px;
+        font-size: 10px;
+    }
+
+}
