@@ -452,8 +452,7 @@
         });
 
     var indice_aleatorio = Math.floor(Math.random()*preguntas.length);
-    const cantidad_de_preguntas = 186;
-    // const cantidad_de_preguntas = 31;
+    const cantidad_de_preguntas = 31;
     var myArray = [];
     myArray.length = cantidad_de_preguntas;
     var numeros_repetidos = [];
@@ -560,17 +559,17 @@
             contador++;
             contador_buenas++;
             indice++;
-            // alert("Bien!!!");
+            alert("Bien!!!");
         }
         else{
             contador++;
             indice++;
-            // alert("Error");
+            alert("Error");
         }
         contador_de_preguntas++;
         document.getElementById("contador").innerHTML=indice+'/30';
         jugar(contador);
-       /* if (contador == 28){ 
+        if (contador == 28){ 
             document.getElementById("boton").value="Finalizar";
             jugar(contador+1);
         }
@@ -581,7 +580,7 @@
             else{
                 document.getElementById("boton").onclick=no_pase();
             }
-        }*/
+        }
     }
 
     </script>
