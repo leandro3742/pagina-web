@@ -1,0 +1,91 @@
+
+:root{
+    --fondo: rgba(255, 0, 0, 0.60);
+    --color-fondo: rgba(255, 245, 245, 0.75);
+    --margen: 150px;
+}
+
+body{
+    font-family: 'Muli', sans-serif;
+    margin:0;
+}
+.form{
+    display: grid;
+    grid-template-areas: "titulo"
+                        "cedula"
+                        "boton";
+    grid-template-rows: 50px 50px 100px;
+    justify-content: center;
+    border-radius: 40px;
+    border: outset;
+    background-color: var(--color-fondo);
+    margin-top: 75px;
+    margin-left: var(--margen);
+    margin-right: var(--margen);
+}
+
+#titulo{
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+#CI{
+    grid-area: cedula;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+#button{
+    grid-area: boton;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 500px;
+    margin-right: 500px;
+    padding: 20px;
+    background-color: lightblue;
+    border-radius: 40px;
+}
+
+#footer{
+    margin-top: 20px;
+    margin-left: var(--margen);
+    margin-right: var(--margen);
+    background-color: rgba(255, 245, 245, 0.75);
+    border-radius: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    border: outset;
+    color: red;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 900px){
+    body{
+        height: 100%;
+        width: 100%;
+    }
+    .form{
+        display: grid;
+        justify-content: center;
+        margin-left: 0px;
+        width: 100%;
+    }
+    #footer{
+        font-size: 12px;
+        margin: 50px 0 0 0;
+        /* margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px; */
+    }
+}

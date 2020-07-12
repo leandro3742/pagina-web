@@ -1,0 +1,127 @@
+:root{
+    --fondo: rgba(255, 0, 0, 0.60);
+    --color-fondo: rgba(255, 245, 245, 0.75);
+    --margen: 150px;
+}
+body{
+    font-family: 'Muli', sans-serif;
+    margin:0;
+    }
+
+#texto{
+    margin-top: 50px;
+    width: 75%;
+    height: 250px;
+    margin-left: 15%;
+    border-radius: 40px;
+    border: outset;
+    padding: 10px;
+    background-color: var(--color-fondo);
+    grid-template-areas: "titulo titulo"
+                         "parrafo parrafo"
+                         "si no";
+}
+#titulo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-style: oblique; */
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    grid-area: titulo;
+}
+#parrafo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    grid-area: parrafo;
+}
+#si{
+    text-decoration: none;
+    color: black;
+    grid-area: si;
+    width: 50px;
+    font-size: 25px;
+    margin-left: 45%;
+}
+#no{
+    text-decoration: none;
+    color: black;
+    grid-area: no;
+    width: 50px;
+    font-size: 25px;
+    margin-left: 5%;  
+}
+
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px 0 0 15% ;
+    width: 75%;
+    height: 50px;
+    padding: 15px;
+    font-size: 25px;
+    background-color: var(--color-fondo);
+    border-radius: 40px;
+    border: outset;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    color: red;
+}
+
+@media screen and (max-width: 800px){
+    body{
+        max-height: 80px;
+    }
+    #texto{
+        margin-top: 50px;
+        height: 200px;
+    }
+    #titulo{
+        font-size: 25px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-top: 25px;
+        grid-area: titulo;
+    }
+    #parrafo{
+        margin-top: 25px;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        grid-area: parrafo;
+    }
+    #si{
+        text-decoration: none;
+        color: black;
+        grid-area: si;
+        width: 25px;
+        font-size: 12px;
+        margin-left: 40%;
+    }
+    #no{
+        text-decoration: none;
+        color: black;
+        grid-area: no;
+        width: 25px;
+        font-size: 12px;
+        margin-left: 5%;  
+    }
+    
+    #footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 25px 0 0 15% ;
+        width: 75%;
+        height: 25px;
+        padding: 7.5px;
+        font-size: 10px;
+    }
+
+}

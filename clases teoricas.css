@@ -1,0 +1,40 @@
+.menu__ClasesTeoricas{
+    background-color: red;
+}
+.titulo{
+    background-color: black;
+    color: white;
+    display: flex;
+    border-radius: 40px;
+    background-color: red;
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    border: outset;
+}
+.videos{
+    display: grid;
+    justify-content: center;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    grid-template-columns: repeat(4, 250px);
+}
+@media screen and (max-width: 800px){
+    .titulo{
+    width: 100%;
+    margin-left: 70px;
+    font-size: var(--fuente-titulos);
+    width: 250px;
+    }
+    .videos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .video{
+    margin-top: 10px;
+    width: 200px;
+    height: 150px;
+    }
+}

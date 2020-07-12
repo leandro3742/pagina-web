@@ -1,0 +1,87 @@
+:root{
+    --fuente-letras : 10px;
+    --fuente-titulos: 15px;
+    --color-fondo: rgba(255, 245, 245, 0.75);
+}
+.menu__Requisitos{
+    background-color: red;
+}
+
+#cuerpo{
+    /*display: grid;
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: repeat(3, 250px);*/
+}
+#titulo1, #titulo2{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-fondo);
+    text-align: center;
+    padding: 10px;
+    margin: 50px 350px 0px 350px;
+    border: outset;
+    border-radius: 40px;
+}
+#lista1, #lista2{
+    display: grid;
+    justify-content: center;
+    background-color: var(--color-fondo);
+    margin: 25px 350px 0 350px;
+    padding: 10px;
+    border-radius: 40px;
+}
+#footer{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-fondo);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    padding: 10px;
+    margin: 25px 300px 0 300px;
+    border-radius: 40px;
+    border: outset;
+    color: red; 
+}
+@media screen and (max-width: 760px){
+    #titulos{
+        display: grid;
+        justify-content: center;
+    }
+    #titulo1, #titulo2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        font-size: var(--fuente-titulos);
+        width: 300px;
+        height: 50px;
+    }
+    #lista1, #lista2{
+        font-size: var(--fuente-letras);
+        display: grid;
+        justify-content: center;
+        white-space: normal;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    #footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 15px;
+        margin-right: 0px;
+        margin-top: 50px;
+        width: 90%;
+        height: 50px;
+        padding: 5px;
+        font-size: var(--fuente-letras);
+    }
+}
+@media screen and (max-width: 800px){
+    #cuerpo{
+        display: grid;
+        justify-content: center;
+        margin: 0;
+    }
+}

@@ -1,0 +1,166 @@
+:root{
+    --fondo: rgba(255, 0, 0, 0.60);
+    --color-fondo: rgba(255, 245, 245, 0.75);
+    --margen: 150px;
+}
+body{
+    font-family: 'Muli', sans-serif;
+    margin:0;
+    }
+
+#texto{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:"reloj"
+                        "pregunta" 
+                        "respuestas"
+                        "boton"
+                        "contador";
+    background-color: var(--color-fondo);
+    margin-top: 75px;
+    margin-left: var(--margen);
+    margin-right: var(--margen);
+    border-radius: 40px;
+    border: outset;
+}
+
+#reloj{
+    grid-area: reloj;
+}
+#pregunta{
+    grid-area: pregunta;
+    /* margin: 10px; */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+}
+#respuestas{
+    grid-area: respuestas;
+    display: grid;
+    grid-template-areas: "respuesta0"
+                         "respuesta1"
+                         "respuesta2"
+                         "respuesta3"  ;
+    margin: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+#respuesta0{
+    min-width: 100px;
+    grid-area: respuesta0;
+}
+#respuesta1{
+    min-width: 100px;
+    grid-area: respuesta1;
+}
+#respuesta2{
+    min-width: 100px;
+    grid-area: respuesta2;
+}
+#respuesta3{
+    min-width: 100px;
+    grid-area: respuesta3;
+}
+#boton{
+    grid-area: boton;
+}
+#contador{
+    grid-area: contador;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 25px;
+    margin-right: 25px;
+    font-style: oblique;
+}      
+#reloj{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+#respuesta0, #respuesta1, #respuesta2, #respuesta3{
+    font-size: 15px;
+    width: 200px;
+    height: 25px;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 40px;
+}
+/* Hace que cuado hagas click en el boton se pinte el fondo de color */
+#respuesta0:focus, #respuesta1:focus, #respuesta2:focus, #respuesta3:focus{
+    /* background-color: var(--fondo); */
+    background-color: lightblue;
+    border-radius: 40px;
+    border-bottom: none;
+}
+
+#boton{
+    margin-left: 400px;
+    margin-right: 400px;
+    font-size: 20px;
+    padding: 10px;
+    background-color: lightblue;
+    border-radius: 40px;
+}
+
+#footer{
+    margin-top: 20px;
+    margin-left: var(--margen);
+    margin-right: var(--margen);
+    background-color: rgba(255, 245, 245, 0.75);
+    border-radius: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    border: outset;
+    color: red;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 800px){
+    body{
+        margin: 0;
+        width: 100%;
+        height: 700px;
+        /* background-image: none; */
+    }
+    #texto{
+        margin: 50px 0 0 0 ;
+        display: grid;
+        justify-content: center;
+        width: 100%;
+    }
+    #pregunta{
+        font-size: 15px;
+    }
+    #respuestas{
+        margin: 0 0 0 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+    #respuesta0, #respuesta1, #respuesta2, #respuesta3{
+        width: 100%;
+        font-size: 12px;
+    }
+    #boton{
+        display: grid;
+        justify-content: center;
+        /* width: 50%; */
+        margin-top: 10px;
+        margin-left: 75px;
+        margin-right: 75px;
+    }
+    #footer{
+        font-size: 12px;
+        margin: 0;
+        margin-top: 100px;
+        /* margin: 25px 25px 0 25px; */
+        width: 100%;
+    }
+}

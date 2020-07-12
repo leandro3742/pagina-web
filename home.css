@@ -1,0 +1,82 @@
+:root{
+    --font-size: 18px;
+    /*--color-fondo:black;*/
+    --color-fondo: rgba(255, 245, 245, 0.75);
+    --color-texto: white;
+    --borde: 2px solid white;
+}
+.menu__LaAcademia{
+    background-color: red;
+}
+.cuerpo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 200px 200px;
+    margin: 10px;
+}
+.cuerpo__titulo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+}
+.cuerpo__texto{
+    display: flex;
+    justify-content: center;
+    color: var(--color-texto);
+    width: 300px;
+    padding: 15px;
+    background-color: red;
+    border: var(--borde);
+    border-radius: 40px;
+    font-size: var(--font-size);
+}
+
+.footer{
+    margin-top: 50px;
+    background: var(--color-fondo);
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-radius: 80px;
+    border: var(--borde);
+}
+.footer__imagen{
+    height: 150px;
+    width: 200px;
+}
+
+@media screen and (max-width: 800px){
+    .cuerpo{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .cuerpo__texto1, .cuerpo__texto2, .cuerpo__texto3{
+        font-size: var(--fuente-letras);
+        display: grid;
+        justify-content: center;
+    }
+    
+    .cuerpo__titulo{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .cuerpo__texto{
+        font-size: 10px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        /*margin-left: 70px;*/
+    }
+    .footer{
+        width: 100%;
+        border-radius: 0px;
+    }
+    .footer__imagen{
+        width: 50px;
+        height: 50px;
+    }
+}
