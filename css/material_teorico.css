@@ -91,7 +91,7 @@ body{
     background-color: var(--color-titulo);
 }
 
-@media screen and (max-width: 760px){
+@media screen and (max-width: 900px){
     .titulo1, .titulo2{
         width: 350px;
         height: 100px;

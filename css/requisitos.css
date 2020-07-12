@@ -42,7 +42,7 @@
     border: outset;
     color: red; 
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 900px){
     #titulos{
         display: grid;
         justify-content: center;
@@ -78,7 +78,7 @@
         font-size: var(--fuente-letras);
     }
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 900px){
     #cuerpo{
         display: grid;
         justify-content: center;
