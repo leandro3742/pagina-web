@@ -76,6 +76,7 @@ body{
         width: 100%;
     }
     .form{
+        overflow: hidden;
         display: grid;
         justify-content: center;
         margin-left: 0px;
