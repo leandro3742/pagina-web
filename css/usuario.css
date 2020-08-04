@@ -72,8 +72,7 @@ body{
 
 @media screen and (max-width: 900px){
     body{
-        height: 100%;
-        width: 100%;
+        background-repeat: no-repeat;
     }
     .form{
         overflow: hidden;
