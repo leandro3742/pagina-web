@@ -53,42 +53,45 @@
         function comprobar(usuario){
             // var Maira = new Object();
 //             Maira.CI = 26372734;
-            const Maira = '26372734';
-            const Leandro = '49189815';
-	    const Arihana = '50379752';
-	
-	    const Loreley = '50352601';
-	    const Carolyn = '44153237';
-	    const Sandra = '38856477';
-	    const Rosana = '30278841';
-	    const Cristian = '51773484';
-		
-            var usuarios_inscriptos = [Maira, Arihana, Leandro, Loreley, Carolyn, Sandra, Rosana, Cristian];
-            var nombres = ['Maira', 'Arihana', 'Leandro', 'Loreley', 'Carolyn', 'Sandra', 'Rosana', 'Cristian'];
-            var sexo = ['f','f','m','f', 'f', 'f', 'f', 'm'];
             
+	    class USUARIO{
+               constructor(CI, sexo, nombre){
+                   this.CI = CI;
+                   this.sexo = sexo;
+                   this.nombre = nombre;
+               }     
+            };	
+	    var Maira = new USUARIO(26372734, 'f', 'Maira');
+            var Leandro = new USUARIO(49189815, 'm', 'Leandro');
+	    var Arihana = new USUARIO(50379752, 'f', 'Arihana');
+	
+	    var Loreley = new USUARIO(50352601, 'f', 'Loreley');
+	    var Carolyn = new USUARIO(44153237, 'f', 'Carolyn');
+	    var Sandra = new USUARIO(38856477, 'f', 'Sandra');
+	    var Rosana = new USUARIO(30278841, 'f', 'Rosana');
+	    var Cristian = new USUARIO(51773484, 'm', 'Cristian);
+		
+            var arreglo = [Maira, Leandro, Arihana, Loreley, Carolyn, Sandra, Rosana, Cristian];
             var esta;
             var i = 0;
-            while( (usuario != usuarios_inscriptos[i]) && (i<=usuarios_inscriptos.length) ){
+            while( (usuario != arreglo[i].CI) && (i<=arreglo.length) ){
                 esta = false;
                 i++;
             }
-            if (usuario == usuarios_inscriptos[i]){
+            if (usuario == arreglo[i].CI){
                     esta = true;
             }
             if (esta == true){
                 //Va link
                 window.location.replace("test.html");
-                if (sexo[i] == 'f'){
-                     alert('Bienvenida '+nombres[i]);
+                if (arreglo[i].sexo == 'f'){
+                     alert('Bienvenida '+arreglo[i].nombre);
                 }
                 else{
-                alert('Bienvenido '+nombres[i]);
+                alert('Bienvenido '+arreglo[i].nombre);
                 }
             }
             else{
-                //va link
-                //location.href = '.html';
                 alert('Usuario incorrecto :(');
             }
         }
