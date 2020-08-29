@@ -66,15 +66,14 @@
 	    var Arihana = new USUARIO(50379752, 'f', 'Arihana');
 	
 	    var Rosana = new USUARIO(30278841, 'f', 'Rosana');
-	    var Cristian = new USUARIO(51773484, 'm', 'Cristian');
             var Julio  = new USUARIO(47537448, 'm' , 'Julio');
             var Lorena = new USUARIO(42155324, 'f', 'Lorena' );
 	    var Samuel = new USUARIO(53066209, 'm', 'Samuel');
 	    var Fernando = new USUARIO(31996684, 'm', 'Fernando');
 	    var Natalia = new USUARIO(42855544, 'f', 'Natalia');
-	    var FlorenciaLabitola = new USUARIO(50097845, 'f', 'Florencia');
+	    var Florencia = new USUARIO(50097845, 'f', 'Florencia'); //Florencia Labitola viernes 5 de octubre
 		
-            var arreglo = [Maira, Leandro, Arihana, Rosana, Cristian, Julio, Lorena, Samuel, Fernando, Natalia, FlorenciaLabitola];
+            var arreglo = [Maira, Leandro, Arihana, Rosana, Julio, Lorena, Samuel, Fernando, Natalia, Florencia];
             var esta;
             var i = 0;
             while( (usuario != arreglo[i].CI) && (i<=arreglo.length) ){
@@ -86,7 +85,7 @@
             }
             if (esta == true){
                 //Va link
-                window.location.replace("test.html");
+                window.location.replace("test1.html");
                 if (arreglo[i].sexo == 'f'){
                      alert('Bienvenida '+arreglo[i].nombre);
                 }
