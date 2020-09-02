@@ -30,7 +30,7 @@
         <form class="form">
             <h1 id="titulo">Ingrese su CI</h1>
             <input id="CI" type="number" placeholder="Cedula de identidad">
-            <button id="button" onclick="me_voy(document.getElementById('CI').value)">Iniciar sesion</button>
+            <button id="button"><a id="link" onclick="me_voy(document.getElementById('CI').value)">Iniciar secion</a></button>
         </form>
     <footer id="footer">
         <h1>Chufle's tu mejor opción</h1>
@@ -87,7 +87,9 @@
             }
             if (esta == true){
                 //Va link
-                window.location.replace("test.html");
+                link = 'test.html';
+                document.getElementById('link').setAttribute('href', link);
+                link = 'test.html';
                 if (arreglo[i].sexo == 'f'){
                      alert('Bienvenida '+arreglo[i].nombre);
                 }
