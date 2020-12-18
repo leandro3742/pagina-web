@@ -30,7 +30,7 @@
         <form class="form">
             <h1 id="titulo">Ingrese su CI</h1>
             <input id="CI" type="number" placeholder="Cedula de identidad">
-            <button id="button"><a id="link" onclick="me_voy(document.getElementById('CI').value)">Iniciar secion</a></button>
+            <button id="button" onclick="me_voy(document.getElementById('CI').value)">Iniciar sesion</button>
         </form>
     <footer id="footer">
         <h1>Chufle's tu mejor opción</h1>
@@ -50,49 +50,33 @@
         }
         
         function comprobar(usuario){
-            
-            class USUARIO{
-               constructor(CI, sexo, nombre){
-                   this.CI = CI;
-                   this.sexo = sexo;
-                   this.nombre = nombre;
-               } 
-                
-            };
-
-            var Maira = new USUARIO(26372734, 'f', 'Maira');
-            var Leandro = new USUARIO(49189815, 'm', 'Leandro');
-	    var Arihana = new USUARIO(50379752, 'f', 'Arihana');
-	    var Ricardo = new USUARIO(64549765, 'm', 'Ricardo'); //Ricardo Garcia
-	    var Katiuska = new USUARIO (48051112, 'f', 'Katiuska');
-	    var Javier = new USUARIO(43769934, 'm', 'Javier'); // Javier Carreras 
-	    var Dario = new USUARIO(45120174, 'm', 'Dario'); //Dario Tomeo
-	    var Santiago = new USUARIO(51967760, 'm', 'Santiago');//Santiago Sanabia  
-	    var Lucrecia = new USUARIO(52839348, 'f', 'Lucrecia'); 
-	    var Joel = new USUARIO(63756991, 'm', 'Joel');
-            var Bruno = new USUARIO(54028159, 'm', 'Bruno');
-		
-            var arreglo = [Maira, Leandro, Arihana, Ricardo, Katiuska, Javier, Dario, Santiago, Lucrecia, Joel, Bruno]; 
+            // var Maira = new Object();
+            // Maira.CI = 26372734;
+            const Gaston = '51815373'; 
+            const Maira = '26372734';
+            const Flavio = '34596162';
+            const Leandro = '49189815';
+            var usuarios_inscriptos = [Maira, Flavio, Leandro, Gaston];
+            var nombres = ['Maira', 'Flavio', 'Leandro', 'Gaston'];
+            var sexo = ['f','m','m', 'm'];
             
             var esta;
             var i = 0;
-            while( (usuario != arreglo[i].CI) && (i<=arreglo.length) ){
+            while( (usuario != usuarios_inscriptos[i]) && (i<=usuarios_inscriptos.length) ){
                 esta = false;
                 i++;
             }
-            if (usuario == arreglo[i].CI){
+            if (usuario == usuarios_inscriptos[i]){
                     esta = true;
             }
             if (esta == true){
                 //Va link
-                link = 'test.html';
-                document.getElementById('link').setAttribute('href', link);
-                link = 'test.html';
-                if (arreglo[i].sexo == 'f'){
-                     alert('Bienvenida '+arreglo[i].nombre);
+                window.location.replace("test.html");
+                if (sexo[i] == 'f'){
+                     alert('Bienvenida '+nombres[i]);
                 }
                 else{
-                alert('Bienvenido '+arreglo[i].nombre);
+                alert('Bienvenido '+nombres[i]);
                 }
             }
             else{
